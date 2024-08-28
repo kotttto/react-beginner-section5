@@ -33,6 +33,16 @@ const createIncompleteTodo = (todo)=>{
     const moveTarget = completeButton.closest("li");
     completeButton.nextElementSibling.remove();
     completeButton.remove();
+
+    //削除ボタンを完了のTODOでも表示
+    const deleteButton2 = document.createElement("button");
+    deleteButton2.innerText = "削除";
+    deleteButton2.addEventListener("click",()=>{
+      //押された削除ボタンの親にあるliタグを完了リストから削除
+      const deleteTarget2 = deleteButton2.closest("li");
+      document.getElementById("complete-list").removeChild(deleteTarget2);
+    })
+
     //戻すボタンを生成してdivタグ配下に設定
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
@@ -43,7 +53,12 @@ const createIncompleteTodo = (todo)=>{
       //押された戻すボタンの親にあるliタグを削除
       backButton.closest("li").remove();
     });
+
+
+
     moveTarget.firstElementChild.appendChild(backButton);
+    moveTarget.firstElementChild.appendChild(deleteButton2);
+
     //完了リストに移動
     document.getElementById('complete-list').appendChild(moveTarget);//移動と削除
 
