@@ -1,28 +1,29 @@
-body {
+body{
   font-family: sans-serif;
-  color: #666;
+  color: #666;/*全体の文字を灰色にする*/
 }
 
-input {
-  border-radius: 8px;
+input{
+  border-radius:8px;
   border: none;
-  padding: 6px 16px;
+  padding:6px 16px;
+
 }
 
-button {
+button{
   border-radius: 8px;
-  border: none;
-  padding: 4px 16px;
-  margin: 0px 2px;
+  border:none;
+  padding:4px 16px;
+  margin:0px 2px;
 }
 
-button:hover {
+button:hover{
   background-color: #79a8a9;
-  color: #fff;
-  cursor: pointer;
+  color:#fff;
+  cursor:pointer;
 }
 
-.input-area {
+.input-area{
   background-color: #c6e5d9;
   width: 400px;
   height: 30px;
@@ -31,36 +32,35 @@ button:hover {
   border-radius: 8px;
 }
 
-.incomplete-area {
+.incomplete-area{
   border: 2px solid #aacfd0;
   width: 400px;
+  /* 200pxを超えたら高さが増える */
   min-height: 200px;
   padding: 8px;
   margin: 8px;
   border-radius: 8px;
-}
 
-.complete-area {
+}
+.complete-area{
   border: 2px solid #aacfd0;
   width: 400px;
+  /* 200pxを超えたら高さが増える */
   min-height: 200px;
   padding: 8px;
   margin: 8px;
-  border-radius: 8px;
+  border-radius: 8px; 
   background-color: #c9dede;
 }
-
-.title {
+.title{
   text-align: center;
   margin-top: 0;
   font-weight: bold;
 }
-
-.list-row {
+.list-row{
   display: flex;
   align-items: center;
 }
-
-.todo-item {
+.todo-item{
   margin: 6px;
 }
